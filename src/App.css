@@ -1,38 +1,231 @@
-.App {
-  text-align: center;
+/**
+ * Structure
+ *
+ */
+
+html {
+    box-sizing: border-box;
+    line-height: 1.4;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html,
+body {
+    background-color: #f0f0f0;
+    font-family: 'Arial';
+    margin: 0;
+    padding: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+header,
+footer {
+    background-color: lightGrey;
+    padding: 20px;
+    border-bottom: 1px solid grey;
+    border-top: 2px solid grey;
+    margin-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+main {
+    width: 90%;
+    margin: 0 auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+section {
+    width: auto;
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+aside {
+    float: right;
+    padding: 20px;
+    border-left: 1px solid lightGrey;
+    width: 30%;
+}
+
+article {
+    float: left;
+    width: 68%;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+    clear: both;
+}
+
+time {
+    font-weight: bold;
+}
+
+figure {
+    margin: 0;
+    position: relative;
+    padding: 10px;
+    border-left: 10px solid grey;
+    background-color: white;
+}
+
+figcaption {
+    display: block;
+    padding-right: 10px;
+    text-align: right;
+    font-size: 16px;
+    font-style: italic;
+    color: #84775c;
+}
+
+blockquote {
+    background: #f9f9f9;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    quotes: '\201C''\201D''\2018''\2019';
+}
+
+blockquote:before {
+    color: #ccc;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+}
+
+blockquote p {
+    display: inline;
+}
+
+cite {
+    font-style: italic;
+}
+
+address,
+details p {
+    border: 4px solid lightGrey;
+    padding: 10px;
+    width: 100%;
+    background-color: white;
+}
+
+summary {
+    margin-bottom: 10px;
+}
+
+a {
+    color: black;
+}
+
+/**
+ * Form, form fields
+ *
+ */
+
+form>button {
+    padding: 0.6em 2em;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 10px;
+    width: calc(20% - 5px);
+    vertical-align: top;
+}
+
+input {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 1em;
+    border: 1px solid lightGrey;
+}
+
+textarea {
+    border-color: lightGrey;
+    width: 80%;
+    padding: 10px;
+}
+
+button {
+    margin: 2em 0;
+    padding: 1em 4em;
+    display: inline-block;
+}
+
+fieldset {
+    border: 1px solid lightGrey;
+    padding: 10px;
+}
+
+/**
+ * Lists
+ *
+
+
+ul {
+}
+
+ul > li {
+}
+
+ol {
+}
+
+ol > li {
+}
+
+ */
+
+dt {
+    font-weight: bold;
+    border-left: 4px solid grey;
+    padding-left: 6px;
+}
+
+dd {
+    margin-bottom: 6px;
+}
+
+/**
+ * Other bits
+ *
+ */
+
+mark {
+    background-color: hotPink;
+}
+
+q {
+    font-style: italic;
+}
+
+.button-holder {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+    .button-holder {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    main {
+        width: 50%;
+    }
 }
